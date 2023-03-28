@@ -6,3 +6,6 @@ spec:
   type: service
   owner: user:guest
   lifecycle: experimental
+fetch('https://api.frobsco.com/v1/list')
+  .then(response => response.json())
+  .then(payload => setFrobs(payload as Frob[]));
